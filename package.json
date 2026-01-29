@@ -1,34 +1,48 @@
 {
-  "name": "guardian-silent",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --write .",
-    "test": "vitest",
-    "prepare": "husky install"
-  },
-  "dependencies": {
-    "lucide-react": "^0.563.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@types/react": "^19.2.5",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.1",
-    "autoprefixer": "^10.4.23",
-    "eslint": "^9.39.1",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "globals": "^16.5.0",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.18",
-    "vite": "^7.2.4"
-  }
+    "name":  "guardian-silent",
+    "private":  true,
+    "version":  "0.0.0",
+    "type":  "module",
+    "scripts":  {
+                    "dev":  "vite",
+                    "build":  "vite build",
+                    "preview":  "vite preview",
+                    "lint":  "eslint . --ext .js,.jsx,.ts,.tsx",
+                    "format":  "prettier --write .",
+                    "test":  "vitest",
+                    "prepare":  "husky install"
+                },
+    "dependencies":  {
+                         "lucide-react":  "^0.563.0",
+                         "react":  "^19.2.0",
+                         "react-dom":  "^19.2.0"
+                     },
+    "devDependencies":  {
+                            "@eslint/js":  "^9.39.1",
+                            "@types/react":  "^19.2.5",
+                            "@types/react-dom":  "^19.2.3",
+                            "@typescript-eslint/eslint-plugin":  "^8.54.0",
+                            "@typescript-eslint/parser":  "^8.54.0",
+                            "@vitejs/plugin-react":  "^5.1.1",
+                            "autoprefixer":  "^10.4.23",
+                            "eslint":  "^9.39.1",
+                            "eslint-plugin-react":  "^7.37.5",
+                            "eslint-plugin-react-hooks":  "^7.0.1",
+                            "eslint-plugin-react-refresh":  "^0.4.24",
+                            "globals":  "^16.5.0",
+                            "happy-dom":  "^20.4.0",
+                            "jsdom":  "^27.4.0",
+                            "postcss":  "^8.5.6",
+                            "tailwindcss":  "^4.1.18",
+                            "vite":  "^7.2.4"
+                        },
+    "lint-staged":  {
+                        "*.{js,jsx,ts,tsx}":  [
+                                                  "eslint --fix",
+                                                  "prettier --write"
+                                              ],
+                        "*.{json,md}":  [
+                                            "prettier --write"
+                                        ]
+                    }
 }
