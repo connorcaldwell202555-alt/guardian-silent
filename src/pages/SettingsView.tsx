@@ -4,11 +4,11 @@ import { ChevronRight, Lock, Share2 } from 'lucide-react'
 const SettingsView: React.FC<{
   onBack: () => void;
   shakeToSos: boolean; setShakeToSos: (v: boolean) => void;
-  voiceTriggerEnabled: boolean; setVoiceTriggerEnabled: (v: boolean) => void;
+  
   silentRecording: boolean; setSilentRecording: (v: boolean) => void;
   fallDetection: boolean; setFallDetection: (v: boolean) => void;
   token: string;
-}> = ({ onBack, shakeToSos, setShakeToSos, voiceTriggerEnabled, setVoiceTriggerEnabled, silentRecording, setSilentRecording, fallDetection, setFallDetection, token }) => (
+}> = ({ onBack, shakeToSos, setShakeToSos, silentRecording, setSilentRecording, fallDetection, setFallDetection, token }) => (
   <div className="h-full flex flex-col animate-in slide-in-from-right duration-300">
     <div className="flex items-center gap-4 mb-8">
       <button onClick={onBack} className="p-2 bg-slate-900 rounded-lg"><ChevronRight className="rotate-180" /></button>
