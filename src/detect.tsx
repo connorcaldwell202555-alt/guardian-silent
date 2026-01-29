@@ -29,7 +29,9 @@ import {
   Users,
   Key,
   Video,
-  CheckCircle
+  CheckCircle,
+  Send,
+  Globe
 } from 'lucide-react'
 
 const App = () => {
