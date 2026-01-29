@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Shield, 
   ShieldAlert, 
@@ -6,8 +6,8 @@ import {
   Clock, 
   Settings, 
   EyeOff, 
-  AlertTriangle, 
-  BellOff, 
+   
+   
   User, 
   Lock,
   MessageSquare,
@@ -17,39 +17,35 @@ import {
   HeartPulse,
   Phone,
   X,
-  Send,
+  
   Plus,
   Trash2,
-  Info,
+  
   Mic,
-  Radio,
-  PowerOff,
+  
+  
   Map,
   Volume2,
-  CloudUpload,
-  Fingerprint,
-  Zap,
-  Activity,
+  
+  
+  
+  
   AlertCircle,
   ShieldCheck,
-  Globe,
-  Share2,
+  
+  
   Siren,
   FileText,
   Gavel,
-  Eye,
+  
   Flame,
   Users,
   Key,
   Video,
-  Camera,
+  
   CheckCircle
 } from 'lucide-react';
 
-import HealthIDView from './pages/HealthIDView'
-import SafeMapView from './pages/SafeMapView'
-import SilentTextView from './pages/SilentTextView'
-import SettingsView from './pages/SettingsView'
 
 const App = () => {
   // --- NAVIGATION & UI STATE ---
@@ -87,7 +83,8 @@ const App = () => {
   const [shakeToSos, setShakeToSos] = useState(true);
   const [fallDetection, setFallDetection] = useState(true);
   const [silentRecording, setSilentRecording] = useState(true);
-  const [cloudSyncActive, setCloudSyncActive] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_cloudSyncActive, setCloudSyncActive] = useState(false);
 
   const [contacts] = useState([
     { id: 1, name: "Sarah (Sister)", phone: "+15550123" },
@@ -229,7 +226,7 @@ const App = () => {
             if (Math.random() > 0.8) addLog(`GPS Update: ${pos.coords.latitude.toFixed(4)}, ${pos.coords.longitude.toFixed(4)}`);
           }
         }, 
-        (err) => console.warn("Geo Denied"), 
+        (_err) => console.warn("Geo Denied"), 
         { enableHighAccuracy: true }
       );
       return () => navigator.geolocation.clearWatch(watchId);
@@ -280,7 +277,7 @@ const App = () => {
           setIsPoliceStrobeOn(false);
           setShowIntelPanel(false);
           setVideoStreamActive(false);
-          setShowAllClearPrompt(true); // ASK TO SEND "I'M SAFE"
+          setShowAllClearPrompt(true); // ASK TO  "I'M SAFE"
         }
         if (pinReason === 'stopTimer') {
           setIsTimerRunning(false);
@@ -355,7 +352,7 @@ const App = () => {
           }}
           className="w-full py-4 bg-emerald-600 rounded-xl font-bold text-white mb-4"
         >
-          Send "I'm Safe" Message
+           "I'm Safe" Message
         </button>
         
         <button 
@@ -719,10 +716,6 @@ const App = () => {
   );
 };
 
-import HealthIDView from './pages/HealthIDView'
-import SafeMapView from './pages/SafeMapView'
-import SilentTextView from './pages/SilentTextView'
-import SettingsView from './pages/SettingsView'
 
 // --- SUB-COMPONENTS ---
 // Subcomponents moved to `src/pages/*` for better organization
