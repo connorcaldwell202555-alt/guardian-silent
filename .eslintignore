@@ -1,0 +1,6 @@
+node_modules
+dist
+public
+src/**/*.d.ts
+.eslintrc.js
+.husky
