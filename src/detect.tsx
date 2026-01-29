@@ -68,6 +68,7 @@ const App = () => {
   const [shakeToSos, setShakeToSos] = useState(true)
   const [fallDetection, setFallDetection] = useState(true)
   const [silentRecording, setSilentRecording] = useState(true)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_cloudSyncActive, setCloudSyncActive] = useState(false) // intentionally unused variable for future use
 
   const [contacts] = useState([
@@ -755,7 +756,7 @@ const SettingsView: React.FC<{
   fallDetection: boolean
   setFallDetection: (v: boolean) => void
   token: string
-}> = ({ onBack, shakeToSos, setShakeToSos, voiceTriggerEnabled, setVoiceTriggerEnabled, silentRecording, setSilentRecording, fallDetection, setFallDetection, token }) => (
+}> = ({ onBack, shakeToSos, setShakeToSos, voiceTriggerEnabled: _voiceTriggerEnabled, setVoiceTriggerEnabled: _setVoiceTriggerEnabled, silentRecording, setSilentRecording, fallDetection, setFallDetection, token }) => (
   <div className="h-full flex flex-col animate-in slide-in-from-right duration-300">
     <div className="flex items-center gap-4 mb-8">
       <button onClick={onBack} className="p-2 bg-slate-900 rounded-lg"><ChevronRight className="rotate-180" /></button>
