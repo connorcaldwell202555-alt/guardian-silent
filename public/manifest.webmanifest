@@ -1,0 +1,16 @@
+{
+  "name": "Guardian Silent",
+  "short_name": "Guardian",
+  "description": "Personal safety assistant",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#111827",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
