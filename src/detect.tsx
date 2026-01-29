@@ -30,8 +30,7 @@ import {
   Key,
   Video,
   CheckCircle,
-  Send,
-  Globe
+  Send
 } from 'lucide-react'
 
 const App = () => {
